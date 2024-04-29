@@ -54,6 +54,7 @@ Please note we recently accidentally made this repo private for a moment, and Gi
 
 - [Installation instructions →](https://httpie.io/docs#installation)
 - [Full documentation →](https://httpie.io/docs)
+- For a brief tutorial on getting started, see the [Quick start guide](#quick-start-guide)
 
 ## Features
 
@@ -68,6 +69,43 @@ Please note we recently accidentally made this repo private for a moment, and Gi
 - `wget`-like downloads
 
 [See all features →](https://httpie.io/docs)
+
+## Quick Start Guide
+
+### Installation
+
+Before Using HTTPie, you must install it. HTTPie works on Windows, macOS, and Linux. 
+You can install using pip:
+```bash
+pip install httpie
+```
+See full [Installation instructions →](https://httpie.io/docs#installation) for more other options. 
+
+
+### Making a GET Request 
+Once HTTPie is installed, you can make requests immediately. 
+```bash
+http httpbin.org/get
+```
+This command will send a GET request to httpbin.org, a website for testing HTTP requests. You will see the response from the server in your terminal. 
+
+### Making a POST Request 
+
+To send data with a POST request, use the following: 
+```bash
+http POST httpbin.org/post hello=world
+```
+This will send a POST request with the data 'hello=world' to httpbin.org. The server's response will include details.
+
+### Viewing the Request Data 
+
+If you want to see the data sent in the HTTP request, use the '--verbose' or '-v' flag: 
+```bash
+http --verbose httpbin.org/get
+```
+
+Those are the basics of using HTTPie. For more information, see the [Full documentation →](https://httpie.io/docs)
+
 
 ## Examples
 
